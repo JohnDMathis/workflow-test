@@ -40,7 +40,7 @@ module.exports =
 /******/ 	// the startup function
 /******/ 	function startup() {
 /******/ 		// Load entry module and return exports
-/******/ 		return __webpack_require__(873);
+/******/ 		return __webpack_require__(218);
 /******/ 	};
 /******/
 /******/ 	// run startup
@@ -2675,6 +2675,29 @@ exports.withCustomRequest = withCustomRequest;
 /***/ (function(module) {
 
 module.exports = require("https");
+
+/***/ }),
+
+/***/ 218:
+/***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
+
+const core = __webpack_require__( 18 );
+const github = __webpack_require__( 717 );
+
+try {
+  // `who-to-greet` input defined in action metadata file
+  const minValue = core.getInput( "min-val" );
+  const maxValue = core.getInput( "max-val" );
+  console.log( "maxValue:", maxValue );
+  const rando = Math.floor( Math.random() * (maxValue - minValue + 1) + min );
+  console.log( "rando:", rando );
+  core.setOutput( "random", rando );
+  // Get the JSON webhook payload for the event that triggered the workflow
+  const payload = JSON.stringify(github.context.payload, undefined, 2)
+  console.log(`The event payload: ${payload}`);
+} catch (error) {
+  core.setFailed(error.message);
+}
 
 /***/ }),
 
@@ -5495,29 +5518,6 @@ paginateRest.VERSION = VERSION;
 exports.paginateRest = paginateRest;
 //# sourceMappingURL=index.js.map
 
-
-/***/ }),
-
-/***/ 873:
-/***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
-
-const core = __webpack_require__( 18 );
-const github = __webpack_require__( 717 );
-
-try {
-  // `who-to-greet` input defined in action metadata file
-  const minValue = core.getInput( "min-val" );
-  const maxValue = core.getInput( "max-val" );
-  console.log( "maxValue:", maxValue );
-  const rando = Math.floor( Math.random() * (maxValue - minValue + 1) + min );
-  console.log( "rando:", rando );
-  core.setOutput( "random", rando );
-  // Get the JSON webhook payload for the event that triggered the workflow
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`);
-} catch (error) {
-  core.setFailed(error.message);
-}
 
 /***/ }),
 
