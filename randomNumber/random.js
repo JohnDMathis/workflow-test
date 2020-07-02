@@ -7,7 +7,7 @@ try {
   const maxValue = Number( core.getInput( "max-val" ) );
   console.log( "minValue:", minValue );
   console.log( "maxValue:", maxValue );
-  const rando = Math.floor( Math.random() * (maxValue - minValue + 1) + min );
+  const rando = Math.floor( Math.random() * (maxValue - minValue + 1) + minValue );
   console.log( "rando:", rando );
   core.setOutput( "random", rando );
   // Get the JSON webhook payload for the event that triggered the workflow
