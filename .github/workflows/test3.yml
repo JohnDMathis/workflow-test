@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Print something random
         id: rando
-        uses: "johndmathis/workflow-tests/randomNumber@v2"
+        uses: "johndmathis/workflow-test/randomNumber@v3"
         with:
           min-value: 13
           max-value: 87
