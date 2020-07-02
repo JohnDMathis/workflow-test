@@ -1,16 +1,17 @@
-name: "job-one"
+name: job-one
 on:
+  push:
+    branches: [ master ]
   pull_request:
-    branches-ignore:
-      - master
+      branches: [ master ]
 env:
   MY_VAR: Hi there!
   MY_OTHER_VAR: Well now
 jobs:
   job1:
-    name: Job One
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Print something
         run: echo $MY_VAR This is something.
 
