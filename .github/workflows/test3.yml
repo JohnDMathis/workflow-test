@@ -16,4 +16,4 @@ jobs:
           min-val: "13"
           max-val: "87"
       - name: Output rando
-        run: "The time was ${{ steps.rando.outputs.rando }}"
+        run: echo "Your random number is ${{ steps.rando.outputs.random }}"
