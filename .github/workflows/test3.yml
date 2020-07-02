@@ -13,7 +13,7 @@ jobs:
         id: rando
         uses: "LeanKit/github-actions/randomNumber@v0.0.6"
         with:
-          min-val: "13"
-          max-val: "87"
+          min-val: "0"
+          max-val: "50"
       - name: Output rando
         run: echo "Your random number is ${{ steps.rando.outputs.random }}"
