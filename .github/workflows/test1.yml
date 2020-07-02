@@ -11,7 +11,6 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: Print something
         run: echo $MY_VAR This is something.
 
