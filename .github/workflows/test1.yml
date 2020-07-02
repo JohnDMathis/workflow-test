@@ -1,0 +1,14 @@
+on: pull_request
+    branches-ignore:
+        - master
+defaults:
+    runs-on: ubuntu-latest
+jobs:
+    job1:
+        name: Job One
+        steps:
+        - name: Print something
+        env:
+            MY_VAR: Hi there!
+        run: |
+            echo $MY_VAR This is something.
