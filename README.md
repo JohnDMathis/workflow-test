@@ -10,7 +10,7 @@
 The random number you requested.
 ### Example Usage
 ```
-uses: leankit/github-actions/randomNumber@v1
+uses: johndmathis/github-actions/randomNumber@v1
 with:
   min-value: 10
   max-value: 20
