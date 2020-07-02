@@ -1,14 +1,17 @@
-on: pull_request
+name: "job-one"
+on:
+  pull_request:
     branches-ignore:
-        - master
-defaults:
-    runs-on: ubuntu-latest
+      - master
+env:
+  MY_VAR: Hi there!
+  MY_OTHER_VAR: Well now
 jobs:
-    job1:
-        name: Job One
-        steps:
-        - name: Print something
-        env:
-            MY_VAR: Hi there!
-        run: |
-            echo $MY_VAR This is something.
+  job1:
+    name: Job One
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print something
+        run: echo $MY_VAR This is something.
+
+
