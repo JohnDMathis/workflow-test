@@ -1,10 +1,14 @@
 name: "Random Number"
 description: "Give me a random number"
 inputs:
+  min-val:  # id of input
+    description: "min random number?"
+    required: true
+    default: "0"
   max-val:  # id of input
     description: "max random number?"
     required: true
-    default: 10
+    default: "100"
 outputs:
   random: # id of output
     description: "The random value you requested"
