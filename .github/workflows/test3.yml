@@ -13,7 +13,7 @@ jobs:
         id: rando
         uses: "johndmathis/workflow-test/randomNumber@v7"
         with:
-          min-value: 13
-          max-value: 87
+          min-val: "13"
+          max-val: "87"
       - name: Output rando
         run: "The time was ${{ steps.rando.outputs.radom }}"
