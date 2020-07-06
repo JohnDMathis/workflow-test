@@ -14,7 +14,6 @@ jobs:
         uses: "LeanKit/github-actions/randomNumber@v0.0.9"
         with:
           min-val: "0"
-          max-val: "50"
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          max-val: ${{ secrets.GITHUB_TOKEN }}
       - name: Output rando
         run: echo "Your random number is ${{ steps.rando.outputs.random }}"
