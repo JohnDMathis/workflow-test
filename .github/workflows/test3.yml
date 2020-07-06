@@ -11,9 +11,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: Print something random
         id: rando
-        uses: "LeanKit/github-actions/randomNumber@v0.0.9"
+        uses: "LeanKit/github-actions/randomNumber@v0.0.10"
         with:
           min-val: "0"
-          max-val: ${{ secrets.GITHUB_TOKEN }}
+          max-val: "0"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Output rando
         run: echo "Your random number is ${{ steps.rando.outputs.random }}"
