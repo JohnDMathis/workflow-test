@@ -15,5 +15,6 @@ jobs:
         with:
           min-val: "0"
           max-val: "50"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Output rando
         run: echo "Your random number is ${{ steps.rando.outputs.random }}"
