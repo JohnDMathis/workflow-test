@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Print something random
         id: rando
-        uses: "LeanKit/github-actions/randomNumber@v0.0.10"
+        uses: "LeanKit/github-actions/actions/randomNumber"
         with:
           min-val: "0"
           max-val: "0"
