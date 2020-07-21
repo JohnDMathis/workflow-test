@@ -1,0 +1,14 @@
+{
+  "name": "workflow-test",
+  "private": false,
+  "version": "0.0.1",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "LeanKit",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.0.0"
+  }
+}
